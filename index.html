@@ -15,27 +15,45 @@
     </header>
     <main>
     <section class="form_container">
+    <div class="col-md-6">
         <form class="form row g-3" action="" name="formulario">
                 <div class="col-md-6">
-                  <label for="nombres" class="form-label">Nombres</label>
-                  <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+                <label for="nombres" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="nombres" placeholder="Nombres">
                 </div>
                 <div class="col-md-6">
-                  <label for="apellidos" class="form-label">Apellidos</label>
-                  <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
                 </div>
                 <div class="col-12">
-                  <label for="direccion" class="form-label">Direccion</label>
-                  <input type="text" class="form-control" id="direccion" placeholder="1234 Main St">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion" placeholder="1234 Main St">
                 </div>
                 <div class="col-md-6">
-                  <label for="sueldo" class="form-label">Sueldo</label>
-                  <input type="number" class="form-control" id="sueldo" placeholder="sueldo">
+                <label for="sueldo" class="form-label">Sueldo</label>
+                <input type="number" class="form-control" id="sueldo" placeholder="sueldo">
                 </div>
-                  <button type="submit" class="btn btn-primary">Agregar usuario</button>
+                <button type="submit" class="btn btn-primary">Agregar usuario</button>
                 </div>
         </form>
+    </div>
+        <div class="col-md-6 form row g-3">
+            <table class="table caption-top bg-light">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Sueldo</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                
+                </tbody>
+            </table>
+        </div>
     </section>
+    
     </main>
     <footer>
         <div class="card">
