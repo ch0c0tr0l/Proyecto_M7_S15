@@ -2,6 +2,7 @@
 document.getElementById("formulario").addEventListener("submit",agregar);
 //funcion crear
 function agregar(e) {
+    
     nombre = document.getElementById("nombres").value
     apellidos = document.getElementById("apellidos").value
     direccion= document.getElementById("direccion").value
@@ -12,6 +13,10 @@ function agregar(e) {
         direccion,
         sueldo
     }
+    if (empleado.nombre === '' || empleado.apellidos === ''  || empleado.direccion === '' || empleado.sueldo === '' ) {
+            alert("los campos deben estar llenos")
+}
+else{
     if (localStorage.getItem("Empleados") === null) {
         let empleados = []
         empleados.push(empleado)
@@ -21,7 +26,7 @@ function agregar(e) {
         empleados.push(empleado)
         localStorage.setItem("Empleados",JSON.stringify(empleados))
     }
-    
+}
     leer()
     document.getElementById("formulario").reset();
     e.preventDefault()
