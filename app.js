@@ -22,14 +22,15 @@ function agregar(e) {
         localStorage.setItem("Empleados",JSON.stringify(empleados))
     }
     
-    leer();
+    leer()
     document.getElementById("formulario").reset();
     e.preventDefault()
-    console.log("usuario agregado")
-    
+    console.log("empleado guardado")    
 } 
+
 function leer() {
     let empleados = JSON.parse(localStorage.getItem("Empleados"));
+    document.getElementById("tbody").innerHTML=""
     for (let i = 0; i < empleados.length; i++) {
         let nombres = empleados[i].nombre
         let apellidos = empleados[i].apellidos
@@ -46,6 +47,7 @@ function leer() {
             <td><button onclick="editar('${nombres}')" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">editar</button></td>
         </tr>`        
     }
+
 }
 
 //funcion editar
@@ -79,8 +81,8 @@ function editar(nombres) {
                     </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" onclick="actualizar('${i}')" class="btn btn-primary">Guardar</button>
+                        <button  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button  onclick="actualizar('${i}')" class="btn btn-primary">Guardar</button>
                     </div>
                     </div>`
         }      
@@ -107,7 +109,7 @@ function eliminar (nombres) {
             empleados.splice(i,1);
         }
     }
-    localStorage.setItem("Empleados",JSON.stringify(nombres));
+    localStorage.setItem("Empleados",JSON.stringify(empleados));
     leer()
 }
 
